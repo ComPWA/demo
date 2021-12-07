@@ -12,6 +12,10 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vTMb3vsOqQUI_A3LYMs0iBvFwuIzyf49rG-PDXpR2TzwXJ4hkg-NzPB_Mslv7DcZuV1Tzm7duZEtI8q/pub)
   [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.11.29/qrules.ipynb)
   [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/demo/blob/main/2021.11.29/qrules.ipynb)
+- **[2021.12.13](./2021.12.13)** PANDA Seminar December 2021<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vSymz5AjdhPw4Kz1pKhdFMnFGYuQvVaC8WbV_HTg770x6RDYoP-Anv9tn88DSuzvSiiQ9F4pcDGVExv/pub)
+  [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.12.13/qrules.ipynb)
+  [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/demo/blob/main/2021.12.13/qrules.ipynb)
 
 ## Local installation
 
