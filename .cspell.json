@@ -49,6 +49,7 @@
         "Miniconda",
         "absl",
         "asdot",
+        "autoreload",
         "axhline",
         "axvline",
         "codemirror",
