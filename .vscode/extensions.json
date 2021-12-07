@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "bungcip.better-toml",
+    "eamodio.gitlens",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode",
+    "ms-python.python",
+    "ms-vsliveshare.vsliveshare",
+    "redhat.vscode-yaml",
+    "streetsidesoftware.code-spell-checker",
+    "travisillig.vscode-json-stable-stringify",
+    "tyriar.sort-lines",
+    "yzhang.markdown-all-in-one"
+  ]
+}

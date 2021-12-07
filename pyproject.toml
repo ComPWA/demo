@@ -1,0 +1,25 @@
+[tool.black]
+line-length = 79
+target-version = [
+    "py36",
+    "py37",
+    "py38",
+    "py39",
+]
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.nbqa.addopts]
+flake8 = [
+    "--extend-ignore=E402,E501",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+    "--durations=0",
+]
+filterwarnings = [
+    "ignore:Passing a schema to Validator.iter_errors is deprecated.*:DeprecationWarning",
+]
