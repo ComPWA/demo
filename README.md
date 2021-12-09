@@ -4,6 +4,10 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
 
 ## Presentations
 
+- **2021.09.08** [PWA 12 / ATHOS 7 in Bristol](https://indico.cern.ch/event/885396/contributions/4373645)<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vQUqojagLjhMa_GQjQCTxCbtACwoDKwac9zoYorQrTZ3BF8cq9eJ349dF7nWzg1bS1oPL8NRbD-lGQx/pub)
+- **2021.10.08** [LHCb Amplitude Analysis Meeting](https://indico.cern.ch/event/1081320)<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://do?slide=id.pcs.google.com/presentation/d/e/2PACX-1vTUQRI34jbEG6MIXFHZiIYiXD0H2JFEUJTO5DEfDZjZNyHi6hQDTJy4URvMiyT-g0ENYP8dRsdnlrI_/pub)
 - **[2021.11.29](./2021.11.29)** [BESIII Collaboration Meeting Winter 2021](https://indico.ihep.ac.cn/event/15291)<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vTMb3vsOqQUI_A3LYMs0iBvFwuIzyf49rG-PDXpR2TzwXJ4hkg-NzPB_Mslv7DcZuV1Tzm7duZEtI8q/pub)
   [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.11.29/qrules.ipynb)
