@@ -93,6 +93,7 @@
         "sharex",
         "startswith",
         "symplot",
+        "timeit",
         "traceback",
         "xlabel",
         "xreplace",
