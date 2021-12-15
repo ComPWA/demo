@@ -57,6 +57,7 @@
         "codemirror",
         "dotprint",
         "elif",
+        "eqnarray",
         "figsize",
         "filterwarnings",
         "functools",
