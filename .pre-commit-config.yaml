@@ -9,7 +9,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v4.0.1
+    rev: v4.1.0
     hooks:
       - id: check-case-conflict
       - id: check-json
@@ -31,12 +31,12 @@ repos:
       - id: blacken-docs
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v5.6.11
+    rev: v5.6.12
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.3.54
+    rev: 2.4.0
     hooks:
       - id: editorconfig-checker
 
