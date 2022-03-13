@@ -53,6 +53,7 @@
         "autoreload",
         "axhline",
         "axvline",
+        "bgcolor",
         "charmness",
         "codemirror",
         "dotprint",
