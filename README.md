@@ -16,6 +16,8 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vSymz5AjdhPw4Kz1pKhdFMnFGYuQvVaC8WbV_HTg770x6RDYoP-Anv9tn88DSuzvSiiQ9F4pcDGVExv/pub)
   [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.12.13/qrules.ipynb)
   [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/demo/blob/main/2021.12.13/qrules.ipynb)
+- **2022.03.29** [DPG Spring Meeting 2022, Mainz](https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk/session/32/contribution/1)<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/1hOB0P8CIfT7vwGXXBD1t4GTeSzO-S-3_ZIByDbAdElE/pub)
 
 ## Local installation
 
