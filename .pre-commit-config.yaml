@@ -31,7 +31,7 @@ repos:
       - id: blacken-docs
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v6.0.0
+    rev: v6.6.0
     hooks:
       - id: cspell
 
@@ -41,7 +41,7 @@ repos:
       - id: editorconfig-checker
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.3.1
+    rev: 1.4.0
     hooks:
       - id: nbqa-black
       - id: nbqa-flake8
@@ -51,7 +51,7 @@ repos:
           - --py36-plus
 
   - repo: https://github.com/kynan/nbstripout
-    rev: 0.5.0
+    rev: 0.6.0
     hooks:
       - id: nbstripout
         args:
@@ -72,6 +72,6 @@ repos:
             metadata.varInspector
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v2.7.1
+    rev: v3.0.0-alpha.0
     hooks:
       - id: prettier
