@@ -18,6 +18,12 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
   [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/demo/blob/main/2021.12.13/qrules.ipynb)
 - **2022.03.29** [DPG Spring Meeting 2022, Mainz](https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk/session/32/contribution/1)<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/1hOB0P8CIfT7vwGXXBD1t4GTeSzO-S-3_ZIByDbAdElE/pub)
+- **2022.09.14** [Second MODE Workshop on Differentiable Programming for Experiment Design](https://indico.cern.ch/event/1145124/contributions/4988905)<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vRju8pgWdx1mLLQ7Qh3GpoY3Yr52k9CjZxec-Tf-YuFpoiXOTfZXTZp2ca-5LNNlesAoW30nPymUSeS/pub)
+- **2022.09.15** [PyHEP 2022 Workshop](https://indico.cern.ch/event/1150631/contributions/5002013)<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vRF-EG2B6u8a6Wb3--TY37bBEgM0bIxgNkCesokrTEwdQZbMwONMXOKqn5GZSirAIH9NXVv6v0ym_es/pub)
+  [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/PyHEP2022/0.1?urlpath=%2Fnotebooks%2Ftalk.ipynb)
+  [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/PyHEP2022/blob/0.1/talk.ipynb)
 
 ## Local installation
 
