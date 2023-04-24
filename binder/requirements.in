@@ -1,6 +1,6 @@
 black
+ipywidgets
 isort
 jupyterlab >=3
 jupyterlab-code-formatter
-pre-commit
-tox
+matplotlib

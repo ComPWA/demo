@@ -20,6 +20,7 @@
         ".vscode/*",
         "environment.yml",
         "pyproject.toml",
+        "requirements*.in",
         "requirements*.txt",
         "tox.ini"
     ],

@@ -1,11 +1,7 @@
-# Defines the bare requirements for setting up Binder
 name: compwa-demo
-channels:
-  - defaults
 dependencies:
   - python==3.8.*
   - pip>=19
-  - graphviz # for binder
+  - graphviz
   - pip:
-      - ipywidgets
-      - matplotlib
+      - -r requirements.in

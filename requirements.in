@@ -1,0 +1,4 @@
+-r binder/requirements.in
+pip-tools
+pre-commit
+tox
