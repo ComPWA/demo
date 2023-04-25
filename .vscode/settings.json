@@ -24,7 +24,7 @@
   },
   "cSpell.enabled": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [80],
+  "editor.rulers": [88],
   "git.rebaseWhenSync": true,
   "python.analysis.autoImportCompletions": false,
   "python.analysis.diagnosticMode": "workspace",
@@ -32,5 +32,5 @@
   "python.languageServer": "Pylance",
   "python.linting.enabled": false,
   "python.testing.unittestEnabled": false,
-  "rewrap.wrappingColumn": 79
+  "rewrap.wrappingColumn": 88
 }

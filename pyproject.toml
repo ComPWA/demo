@@ -1,5 +1,4 @@
 [tool.black]
-line-length = 79
 target-version = [
     "py36",
     "py37",
@@ -9,7 +8,6 @@ target-version = [
 
 [tool.isort]
 profile = "black"
-line_length = 79
 
 [tool.nbqa.addopts]
 flake8 = [
