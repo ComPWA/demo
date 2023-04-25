@@ -4,3 +4,4 @@ isort
 jupyterlab >=3
 jupyterlab-code-formatter
 matplotlib
+ypy-websocket <0.8.3
