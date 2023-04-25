@@ -32,8 +32,7 @@ It's easiest to work with [Conda](https://docs.conda.io/en/latest/index.html) ([
 ```shell
 conda env create
 conda activate compwa-demo
-pip install -r requirements.txt
-pre-commit install
+pre-commit install --install-hooks
 ```
 
 Style checks can now be performed with either of the commands `pre-commit run -a` or `tox`. To run a specific notebook or a folder with notebooks, use e.g.:
