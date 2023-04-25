@@ -4,4 +4,6 @@ dependencies:
   - pip>=19
   - graphviz
   - pip:
-      - -r requirements.in
+      - >-
+        -c requirements.txt
+        -r requirements.in
