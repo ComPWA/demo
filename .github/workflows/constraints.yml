@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-python@v4
         with:
           python-version: "3.8"
+      - run: pip install pip-tools
       - run: pip-compile --no-annotate --strip-extras --upgrade binder/requirements.in
       - run: pip-compile --no-annotate --strip-extras --upgrade requirements.in
       - uses: actions/upload-artifact@v3
