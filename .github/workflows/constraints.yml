@@ -1,0 +1,88 @@
+on:
+  pull_request:
+    branches:
+      - main
+      - epic/*
+      - "[0-9]+.[0-9]+.x"
+  workflow_dispatch:
+
+jobs:
+  pip-constraints:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.pull_request.head.repo.full_name == github.repository
+    name: Update pip constraints
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: "3.8"
+      - run: pip-compile --no-annotate --strip-extras --upgrade binder/requirements.in
+      - run: pip-compile --no-annotate --strip-extras --upgrade requirements.in
+      - uses: actions/upload-artifact@v3
+        with:
+          path: |
+            binder/requirements.txt
+            requirements.txt
+
+  pre-commit:
+    name: pre-commit autoupdate
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: ComPWA/update-pre-commit@main
+
+  push:
+    name: Push changes
+    runs-on: ubuntu-22.04
+    needs:
+      - pip-constraints
+      - pre-commit
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.PAT }}
+      - uses: actions/download-artifact@v3
+      - run: ls -A
+      - name: Move artifacts to correct location
+        run: |
+          if [[ -d artifact ]]; then
+            cd artifact
+            ls -A
+            for path in .pre-commit-config.yaml requirements.txt binder/requirements.txt; do
+              [[ -f $path ]] && mv -f $path ../$path
+            done
+          fi
+      - run: git status -s
+      - name: Commit and push changes
+        if: github.event_name == 'pull_request'
+        run: |
+          git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
+          git config --global user.name "GitHub"
+          git config --global user.email "noreply@github.com"
+          git checkout -b ${{ github.head_ref }}
+          if [[ $(git status -s) ]]; then
+            git add -A
+            git commit -m "MAINT: update pip constraints and pre-commit"
+            git config pull.rebase true
+            git pull origin ${{ github.head_ref }}
+            git push origin HEAD:${{ github.head_ref }}
+          fi
+      - name: Create Pull Request
+        if: >-
+          github.event_name == 'workflow_dispatch'
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: "MAINT: update pip constraints and pre-commit"
+          committer: GitHub <noreply@github.com>
+          author: GitHub <noreply@github.com>
+          title: "MAINT: update pip constraints and pre-commit"
+          labels: |
+            🔨 Maintenance
+          branch-suffix: timestamp
+          delete-branch: true
+          token: ${{ secrets.PAT }}
