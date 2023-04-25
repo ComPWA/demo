@@ -15,11 +15,13 @@
     ],
     "ignorePaths": [
         "**/.cspell.json",
+        ".github/workflows",
         ".gitignore",
         ".pre-commit-config.yaml",
         ".vscode/*",
         "environment.yml",
         "pyproject.toml",
+        "requirements*.in",
         "requirements*.txt",
         "tox.ini"
     ],
