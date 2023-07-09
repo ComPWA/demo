@@ -1,6 +1,5 @@
 {
   "recommendations": [
-    "bungcip.better-toml",
     "eamodio.gitlens",
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
@@ -9,6 +8,7 @@
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
     "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml",
     "tyriar.sort-lines",
     "yzhang.markdown-all-in-one"
   ]
