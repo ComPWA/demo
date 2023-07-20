@@ -22,6 +22,11 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vQ2R_H5loTQrJ5NeK9IzQ_FUA8vl-EeiDbszns1GsnlH2WGomJBL-eZ6hCefFxZcl5RuimPY0Z8TW59/pub)
 - **2022.03.29** [DPG Spring Meeting 2022, Mainz](https://www.dpg-verhandlungen.de/year/2022/conference/mainz/part/hk/session/32/contribution/1)<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/1hOB0P8CIfT7vwGXXBD1t4GTeSzO-S-3_ZIByDbAdElE/pub)
+- **[2021.12.13](./2021.12.13)** P̅ANDA Seminar<br>
+  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vSymz5AjdhPw4Kz1pKhdFMnFGYuQvVaC8WbV_HTg770x6RDYoP-Anv9tn88DSuzvSiiQ9F4pcDGVExv/pub)
+  [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.12.13/qrules.ipynb)
+  [![Google Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ComPWA/demo/blob/main/2021.12.13/qrules.ipynb)
+  <!-- cspell:words P̅ANDA -->
 - **[2021.11.29](./2021.11.29)** [BESIII Collaboration Meeting Winter 2021](https://indico.ihep.ac.cn/event/15291)<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vTMb3vsOqQUI_A3LYMs0iBvFwuIzyf49rG-PDXpR2TzwXJ4hkg-NzPB_Mslv7DcZuV1Tzm7duZEtI8q/pub)
   [![Binder](https://static.mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ComPWA/demo/main?urlpath=lab/tree/2021.11.29/qrules.ipynb)
