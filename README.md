@@ -11,7 +11,8 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
   [![PPTX Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk9IeaGc9GA34PqEGIw?e=JlHjII)
   [![PDF Slides](https://img.shields.io/badge/PDF-9cf?style=flat&logo=files)](https://indico.cern.ch/event/1234156/contributions/5502153/attachments/2688765/4669262/ComPWA.pdf)
 - **2023.06.07** [HADRON2023](https://agenda.infn.it/event/33110/contributions/198133) [[polarimetry](https://github.com/ComPWA/polarimetry)]<br>
-  [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk8538zF3cyOflWxiUw?e=EYHVvX)
+  [![PPTX Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk8538zF3cyOflWxiUw?e=EYHVvX)
+  [![PDF Slides](https://img.shields.io/badge/PDF-9cf?style=flat&logo=files)](https://agenda.infn.it/event/33110/contributions/198133/attachments/106423/149913/ComPWA_polarimetry_static.pdf)
 - **2023.05.11** [CHEP2023](https://indico.jlab.org/event/459/contributions/11604)<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=googledrive)](https://docs.google.com/presentation/d/e/2PACX-1vQc5F6HI4gOSYgvMeq74AThWjPWE8y0xBVJf4t6xdXmD7F5nN7_4JohH-_4qN_wCIkjW4rZ-3mjs6E-/pub)
 - **2023.03.16** [BESIII Collaboration Meeting Spring 2023](https://indico.ihep.ac.cn/event/18456/contributions/129390) [[polarimetry](https://github.com/ComPWA/polarimetry)]<br>
