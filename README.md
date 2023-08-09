@@ -4,6 +4,12 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
 
 ## Presentations
 
+- **2023.08.03** Jefferson Lab Hall D Talk<br>
+  [![PPTX Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk9k1TpgcoEOz-qR1Zw?e=dxvVQr)
+  [![PDF Slides](https://img.shields.io/badge/PDF-9cf?style=flat&logo=files)](https://1drv.ms/b/s!Ai5ZGBfm7ipQk9k3Fr8o6q5H_YSaqQ?e=fkuYBo)
+- **2023.07.26** [PyHEP.dev](https://indico.cern.ch/event/1234156/timetable/#4-self-documenting-model-build)<br>
+  [![PPTX Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk9IeaGc9GA34PqEGIw?e=JlHjII)
+  [![PDF Slides](https://img.shields.io/badge/PDF-9cf?style=flat&logo=files)](https://indico.cern.ch/event/1234156/contributions/5502153/attachments/2688765/4669262/ComPWA.pdf)
 - **2023.06.07** [HADRON2023](https://agenda.infn.it/event/33110/contributions/198133) [[polarimetry](https://github.com/ComPWA/polarimetry)]<br>
   [![Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQk8538zF3cyOflWxiUw?e=EYHVvX)
 - **2023.05.11** [CHEP2023](https://indico.jlab.org/event/459/contributions/11604)<br>
