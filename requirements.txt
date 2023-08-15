@@ -117,7 +117,7 @@ stack-data==0.6.2
 terminado==0.17.1
 tinycss2==1.2.1
 tomli==2.0.1
-tornado==6.3.2
+tornado==6.3.3
 tox==4.6.4
 traitlets==5.9.0
 typing-extensions==4.7.1
