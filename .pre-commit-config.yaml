@@ -30,6 +30,11 @@ repos:
     hooks:
       - id: blacken-docs
 
+  - repo: https://github.com/psf/black
+    rev: 23.9.1
+    hooks:
+      - id: black-jupyter
+
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v7.3.0
     hooks:
@@ -43,7 +48,6 @@ repos:
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.0
     hooks:
-      - id: nbqa-black
       - id: nbqa-flake8
       - id: nbqa-isort
       - id: nbqa-pyupgrade
