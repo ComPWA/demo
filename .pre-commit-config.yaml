@@ -26,7 +26,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.201
+    rev: 0.0.202
     hooks:
       - id: colab-toc-visible
 
