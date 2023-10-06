@@ -6,14 +6,6 @@ target-version = [
     "py39",
 ]
 
-[tool.isort]
-profile = "black"
-
-[tool.nbqa.addopts]
-flake8 = [
-    "--extend-ignore=E402,E501",
-]
-
 [tool.pytest.ini_options]
 addopts = [
     "--durations=0",
@@ -21,3 +13,17 @@ addopts = [
 filterwarnings = [
     "ignore:Passing a schema to Validator.iter_errors is deprecated.*:DeprecationWarning",
 ]
+
+[tool.tomlsort]
+all = false
+ignore_case = true
+in_place = true
+sort_first = [
+    "build-system",
+    "project",
+    "tool.setuptools",
+    "tool.setuptools_scm",
+]
+sort_table_keys = true
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true

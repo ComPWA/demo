@@ -1,6 +1,8 @@
 ci:
   autoupdate_commit_msg: "MAINT: autoupdate pre-commit hooks"
   autoupdate_schedule: quarterly
+  skip:
+    - taplo
 
 repos:
   - repo: meta
@@ -26,19 +28,28 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.0.202
+    rev: 0.1.0rc0
     hooks:
+      - id: check-dev-files
+        args:
+          - --no-gitpod
+          - --no-prettierrc
+          - --no-pypi
+          - --no-python
+          - --no-version-branches
+          - --repo-name=ComPWA-demo
+          - --repo-title="ComPWA demos"
       - id: colab-toc-visible
-
-  - repo: https://github.com/asottile/blacken-docs
-    rev: 1.16.0
-    hooks:
-      - id: blacken-docs
 
   - repo: https://github.com/psf/black
     rev: 23.9.1
     hooks:
       - id: black-jupyter
+
+  - repo: https://github.com/asottile/blacken-docs
+    rev: 1.16.0
+    hooks:
+      - id: blacken-docs
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
     rev: v7.3.1
@@ -49,12 +60,12 @@ repos:
     rev: 2.7.2
     hooks:
       - id: editorconfig-checker
+        name: editorconfig
+        alias: ec
 
   - repo: https://github.com/nbQA-dev/nbQA
     rev: 1.7.0
     hooks:
-      - id: nbqa-flake8
-      - id: nbqa-isort
       - id: nbqa-pyupgrade
         args:
           - --py36-plus
@@ -65,9 +76,11 @@ repos:
       - id: nbstripout
         args:
           - --extra-keys
-          - >
+          - |
+            cell.attachments
             cell.metadata.code_folding
             cell.metadata.id
+            cell.metadata.pycharm
             cell.metadata.user_expressions
             metadata.celltoolbar
             metadata.colab.name
@@ -86,3 +99,15 @@ repos:
     rev: v3.0.3
     hooks:
       - id: prettier
+
+  - repo: https://github.com/ComPWA/mirrors-taplo
+    rev: v0.8.1
+    hooks:
+      - id: taplo
+
+  - repo: https://github.com/pappasam/toml-sort
+    rev: v0.23.1
+    hooks:
+      - id: toml-sort
+        args:
+          - --in-place

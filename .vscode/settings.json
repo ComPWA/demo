@@ -2,6 +2,10 @@
   "[bibtex]": {
     "editor.formatOnSave": false
   },
+  "[git-commit]": {
+    "editor.rulers": [72],
+    "rewrap.wrappingColumn": 72
+  },
   "[ipynb]": {
     "editor.formatOnSave": false
   },
@@ -24,13 +28,10 @@
   },
   "cSpell.enabled": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [88],
   "git.rebaseWhenSync": true,
+  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "python.analysis.autoImportCompletions": false,
-  "python.analysis.diagnosticMode": "workspace",
-  "python.formatting.provider": "black",
   "python.languageServer": "Pylance",
-  "python.linting.enabled": false,
   "python.testing.unittestEnabled": false,
   "rewrap.wrappingColumn": 88
 }
