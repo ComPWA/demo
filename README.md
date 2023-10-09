@@ -1,5 +1,8 @@
 # ComPWA demo notebooks
 
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Spelling checked](https://img.shields.io/badge/cspell-checked-brightgreen.svg)](https://github.com/streetsidesoftware/cspell/tree/master/packages/cspell)
+
 A collection of Jupyter notebooks that demonstrate features of the [ComPWA](https://github.com/ComPWA) packages [QRules](https://qrules.rtfd.io), [AmpForm](https://ampform.rtfd.io), and [TensorWaves](https://tensorwaves.rtfd.io). The notebooks are self-contained in the sense that they define their own pinned requirements and can be run independently in [Binder](https://mybinder.org) or [Google Colaboratory](https://research.google.com/colaboratory).
 
 ## Presentations
