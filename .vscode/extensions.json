@@ -5,6 +5,9 @@
     "esbenp.prettier-vscode",
     "garaioag.garaio-vscode-unwanted-recommendations",
     "github.vscode-github-actions",
+    "ms-python.black-formatter",
+    "ms-python.flake8",
+    "ms-python.isort",
     "ms-python.python",
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
@@ -17,8 +20,6 @@
   "unwantedRecommendations": [
     "bungcip.better-toml",
     "davidanson.vscode-markdownlint",
-    "ms-python.flake8",
-    "ms-python.isort",
     "ms-python.pylint",
     "travisillig.vscode-json-stable-stringify"
   ]

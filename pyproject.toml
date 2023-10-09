@@ -6,6 +6,14 @@ target-version = [
     "py39",
 ]
 
+[tool.isort]
+profile = "black"
+
+[tool.nbqa.addopts]
+flake8 = [
+    "--extend-ignore=E402,E501",
+]
+
 [tool.pytest.ini_options]
 addopts = [
     "--durations=0",

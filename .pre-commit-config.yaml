@@ -38,10 +38,20 @@ repos:
           - --no-prettierrc
           - --no-pypi
           - --no-python
+          - --no-ruff
           - --no-version-branches
           - --repo-name=ComPWA-demo
           - --repo-title="ComPWA demos"
       - id: colab-toc-visible
+
+  - repo: https://github.com/nbQA-dev/nbQA
+    rev: 1.7.0
+    hooks:
+      - id: nbqa-flake8
+      - id: nbqa-isort
+      - id: nbqa-pyupgrade
+        args:
+          - --py36-plus
 
   - repo: https://github.com/psf/black
     rev: 23.9.1
@@ -64,13 +74,6 @@ repos:
       - id: editorconfig-checker
         name: editorconfig
         alias: ec
-
-  - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
-    hooks:
-      - id: nbqa-pyupgrade
-        args:
-          - --py36-plus
 
   - repo: https://github.com/kynan/nbstripout
     rev: 0.6.1
