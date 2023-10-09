@@ -28,10 +28,11 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.0rc2
+    rev: 0.1.0rc3
     hooks:
       - id: check-dev-files
         args:
+          - --no-cspell-update
           - --no-gitpod
           - --no-prettierrc
           - --no-pypi
