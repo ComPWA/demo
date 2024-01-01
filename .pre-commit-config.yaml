@@ -28,7 +28,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/ComPWA/repo-maintenance
-    rev: 0.1.0
+    rev: 0.1.11
     hooks:
       - id: check-dev-files
         args:
@@ -45,7 +45,7 @@ repos:
       - id: colab-toc-visible
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.7.0
+    rev: 1.7.1
     hooks:
       - id: nbqa-flake8
       - id: nbqa-isort
@@ -54,7 +54,7 @@ repos:
           - --py36-plus
 
   - repo: https://github.com/psf/black
-    rev: 23.9.1
+    rev: 23.12.1
     hooks:
       - id: black-jupyter
 
@@ -64,12 +64,12 @@ repos:
       - id: blacken-docs
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v7.3.1
+    rev: v8.2.1
     hooks:
       - id: cspell
 
   - repo: https://github.com/editorconfig-checker/editorconfig-checker.python
-    rev: 2.7.2
+    rev: 2.7.3
     hooks:
       - id: editorconfig-checker
         name: editorconfig
@@ -101,7 +101,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/pre-commit/mirrors-prettier
-    rev: v3.0.3
+    rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
 
