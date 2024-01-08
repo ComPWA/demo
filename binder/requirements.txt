@@ -6,7 +6,7 @@
 #
 asttokens==2.4.1
 backcall==0.2.0
-comm==0.2.0
+comm==0.2.1
 contourpy==1.1.1
 cycler==0.12.1
 decorator==5.1.1
@@ -25,7 +25,7 @@ packaging==23.2
 parso==0.8.3
 pexpect==4.9.0
 pickleshare==0.7.5
-pillow==10.1.0
+pillow==10.2.0
 prompt-toolkit==3.0.43
 ptyprocess==0.7.0
 pure-eval==0.2.2
@@ -34,8 +34,8 @@ pyparsing==3.1.1
 python-dateutil==2.8.2
 six==1.16.0
 stack-data==0.6.3
-traitlets==5.14.0
+traitlets==5.14.1
 typing-extensions==4.9.0
-wcwidth==0.2.12
+wcwidth==0.2.13
 widgetsnbextension==4.0.9
 zipp==3.17.0
