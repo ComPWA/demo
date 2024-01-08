@@ -50,6 +50,7 @@
     "Weisskopf"
   ],
   "ignoreWords": [
+    "COMAP",
     "Colab",
     "Colaboratory",
     "Miniconda",
