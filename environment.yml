@@ -4,6 +4,8 @@ dependencies:
   - pip>=19
   - graphviz
   - pip:
-      - -e .[dev]
+      - >-
+        -c requirements.txt
+        -r requirements.in
 variables:
   PRETTIER_LEGACY_CLI: "1"
