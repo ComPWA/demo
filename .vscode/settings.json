@@ -20,16 +20,18 @@
   },
   "[python]": {
     "editor.codeActionsOnSave": {
-      "source.organizeImports": true
+      "source.organizeImports": "explicit"
     }
   },
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "cSpell.enabled": true,
+  "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.rebaseWhenSync": true,
   "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
+  "multiDiffEditor.experimental.enabled": true,
   "python.analysis.autoImportCompletions": false,
   "python.languageServer": "Pylance",
   "python.testing.unittestEnabled": false,
