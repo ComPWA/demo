@@ -7,7 +7,7 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
 
 ## Presentations
 
-- **2023.12.14** 5th COMPASS "Analysis Phase" mini-workshop (COMAP-V)<br>
+- **2023.12.14** [5th COMPASS "Analysis Phase" mini-workshop](https://indico.cern.ch/event/1348003) (COMAP-V)<br>
   [![PPTX Slides](https://img.shields.io/badge/view-slides-9cf?style=flat&logo=microsoftonedrive)](https://1drv.ms/p/s!Ai5ZGBfm7ipQlJp2wH9IWwmFGD4bpQ?e=9hrdUK)
   [![PDF Slides](https://img.shields.io/badge/PDF-9cf?style=flat&logo=files)](https://indico.cern.ch/event/1348003/contributions/5677101/attachments/2772309/4830895/2023-12-14_COMAP_Symbolic_models.pdf)
 - **2023.08.03** Jefferson Lab Hall D Talk<br>
