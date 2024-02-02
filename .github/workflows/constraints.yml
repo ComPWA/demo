@@ -6,6 +6,10 @@ on:
       - main
       - epic/*
       - "[0-9]+.[0-9]+.x"
+    paths:
+      - "**/requirements.in"
+      - "**/requirements.txt"
+      - .pre-commit-config.yaml
   workflow_dispatch:
 
 jobs:
