@@ -6,4 +6,4 @@ jupyterlab >=3
 jupyterlab-code-formatter
 pre-commit
 tox
-ypy-websocket <0.8.3  # dependency conflict
+ypy-websocket <0.8.3   # dependency conflict
