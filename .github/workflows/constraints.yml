@@ -29,6 +29,7 @@ jobs:
       - run: pip-compile --no-annotate --strip-extras --upgrade requirements.in
       - uses: actions/upload-artifact@v4
         with:
+          name: pip-constraints
           path: |
             binder/requirements.txt
             requirements.txt
@@ -54,6 +55,9 @@ jobs:
         with:
           token: ${{ secrets.PAT }}
       - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
+          path: artifact
       - run: ls -A
       - name: Move artifacts to correct location
         run: |
