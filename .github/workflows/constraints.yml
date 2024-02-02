@@ -20,7 +20,7 @@ jobs:
     name: Update pip constraints
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
         with:
           python-version: "3.8"
@@ -40,7 +40,7 @@ jobs:
       github.event.pull_request.head.repo.full_name == github.repository
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - uses: ComPWA/update-pre-commit@main
 
   push:
@@ -50,7 +50,7 @@ jobs:
       - pip-constraints
       - pre-commit
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           token: ${{ secrets.PAT }}
       - uses: actions/download-artifact@v3
