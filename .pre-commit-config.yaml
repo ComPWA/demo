@@ -12,7 +12,7 @@ repos:
       - id: check-useless-excludes
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.2.3
+    rev: 0.2.2
     hooks:
       - id: check-dev-files
         args:
@@ -55,7 +55,7 @@ repos:
       - id: trailing-whitespace
 
   - repo: https://github.com/psf/black
-    rev: 24.1.1
+    rev: 23.12.1
     hooks:
       - id: black-jupyter
 
