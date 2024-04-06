@@ -3,14 +3,17 @@
     "editor.formatOnSave": false
   },
   "[git-commit]": {
-    "editor.rulers": [72],
+    "editor.rulers": [
+      72
+    ],
     "rewrap.wrappingColumn": 72
   },
   "[ipynb]": {
     "editor.formatOnSave": false
   },
   "[json]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.wordWrap": "on"
   },
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -30,10 +33,15 @@
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.rebaseWhenSync": true,
-  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
+  "github-actions.workflows.pinned.workflows": [
+    ".github/workflows/ci.yml"
+  ],
+  "gitlens.telemetry.enabled": false,
   "multiDiffEditor.experimental.enabled": true,
   "python.analysis.autoImportCompletions": false,
   "python.languageServer": "Pylance",
   "python.testing.unittestEnabled": false,
-  "rewrap.wrappingColumn": 88
+  "redhat.telemetry.enabled": false,
+  "rewrap.wrappingColumn": 88,
+  "telemetry.telemetryLevel": "off"
 }
