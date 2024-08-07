@@ -1,9 +1,8 @@
 -c binder/requirements.txt
 -r binder/requirements.in
-black
-isort
 jupyterlab >=3
 jupyterlab-code-formatter
 pre-commit
+ruff
 tox
 ypy-websocket <0.8.3  # dependency conflict
