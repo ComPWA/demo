@@ -3,9 +3,7 @@
     "editor.formatOnSave": false
   },
   "[git-commit]": {
-    "editor.rulers": [
-      72
-    ],
+    "editor.rulers": [72],
     "rewrap.wrappingColumn": 72
   },
   "[ipynb]": {
@@ -33,9 +31,7 @@
   "diffEditor.experimental.showMoves": true,
   "editor.formatOnSave": true,
   "git.rebaseWhenSync": true,
-  "github-actions.workflows.pinned.workflows": [
-    ".github/workflows/ci.yml"
-  ],
+  "github-actions.workflows.pinned.workflows": [".github/workflows/ci.yml"],
   "gitlens.telemetry.enabled": false,
   "multiDiffEditor.experimental.enabled": true,
   "python.analysis.autoImportCompletions": false,

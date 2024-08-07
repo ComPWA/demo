@@ -20,8 +20,10 @@ repos:
           - |
             cell.attachments
             cell.metadata.code_folding
+            cell.metadata.editable
             cell.metadata.id
             cell.metadata.pycharm
+            cell.metadata.slideshow
             cell.metadata.user_expressions
             metadata.celltoolbar
             metadata.colab.name
@@ -37,7 +39,7 @@ repos:
             metadata.vscode
 
   - repo: https://github.com/ComPWA/policy
-    rev: 0.3.9
+    rev: 0.3.17
     hooks:
       - id: check-dev-files
         args:
@@ -52,9 +54,10 @@ repos:
           - --repo-name=ComPWA-demo
           - --repo-title="ComPWA demos"
       - id: colab-toc-visible
+      - id: remove-empty-tags
 
   - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.8.5
+    rev: 1.8.7
     hooks:
       - id: nbqa-flake8
       - id: nbqa-isort
@@ -102,12 +105,12 @@ repos:
           - --in-place
 
   - repo: https://github.com/psf/black
-    rev: 24.4.2
+    rev: 24.8.0
     hooks:
       - id: black-jupyter
 
   - repo: https://github.com/streetsidesoftware/cspell-cli
-    rev: v8.9.0
+    rev: v8.13.1
     hooks:
       - id: cspell
 
