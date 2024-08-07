@@ -24,9 +24,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.8"
-      - run: pip install pip-tools
-      - run: pip-compile --no-annotate --strip-extras --upgrade binder/requirements.in
-      - run: pip-compile --no-annotate --strip-extras --upgrade requirements.in
+      - run: pip install uv
+      - run: uv pip compile binder/requirements.in -o binder/requirements.txt --no-annotate --strip-extras --upgrade
+      - run: uv pip compile requirements.in -o requirements.txt --no-annotate --strip-extras --upgrade
       - uses: actions/upload-artifact@v4
         with:
           name: pip-constraints
