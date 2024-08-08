@@ -1,10 +1,14 @@
 -c binder/requirements.txt
 -r binder/requirements.in
 jupyterlab >=3
-jupyterlab-code-formatter
+jupyterlab-code-formatter >=3.0.0
+jupyterlab-git
+jupyterlab-lsp
 nbmake
 pre-commit
 pytest
+python-lsp-ruff
+python-lsp-server[rope]
 ruff
 tox
 uv
