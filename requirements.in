@@ -6,4 +6,3 @@ pre-commit
 ruff
 tox
 uv
-ypy-websocket <0.8.3  # dependency conflict
