@@ -58,10 +58,12 @@ split-on-trailing-comma = false
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = [
     "ANN",
+    "B015",
     "B018",
     "C90",
     "D",
     "E303",
+    "E402",
     "E703",
     "N806",
     "N816",
