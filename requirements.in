@@ -2,7 +2,9 @@
 -r binder/requirements.in
 jupyterlab >=3
 jupyterlab-code-formatter
+nbmake
 pre-commit
+pytest
 ruff
 tox
 uv
