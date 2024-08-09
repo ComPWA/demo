@@ -1,6 +1,6 @@
 name: compwa-demo
 dependencies:
-  - python==3.8.*
+  - python==3.9.*
   - pip>=19
   - graphviz
   - pip:
@@ -8,4 +8,4 @@ dependencies:
         -c requirements.txt
         -r requirements.in
 variables:
-  PRETTIER_LEGACY_CLI: "1"
+  PRETTIER_LEGACY_CLI: 1

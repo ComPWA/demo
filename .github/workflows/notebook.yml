@@ -1,7 +1,19 @@
 name: Notebook
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_SYSTEM_PYTHON: true
+
 on:
   workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "**/*.ipynb"
 
 jobs:
   pytest:
@@ -9,12 +21,16 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-python@master
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.9"
+      - uses: hynek/setup-cached-uv@v2
       - name: Install dependencies
         run: |
           sudo apt-get -y install graphviz
-          pip install tensorflow==2.7 typing-extensions~=3.7.4 wrapt~=1.12.1
-          pip install ipywidgets matplotlib nbmake pytest
-      - run: pytest --nbmake
+          pip install uv
+      - run: |
+          for notebook in $(git ls-files | grep ipynb); do
+            uv pip sync requirements.txt --quiet --system
+            pytest $notebook --no-header
+          done

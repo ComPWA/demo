@@ -2,6 +2,7 @@
 addopts = [
     "--color=yes",
     "--durations=0",
+    "--nbmake",
 ]
 filterwarnings = [
     "ignore:Passing a schema to Validator.iter_errors is deprecated.*:DeprecationWarning",
@@ -58,10 +59,12 @@ split-on-trailing-comma = false
 [tool.ruff.lint.per-file-ignores]
 "*.ipynb" = [
     "ANN",
+    "B015",
     "B018",
     "C90",
     "D",
     "E303",
+    "E402",
     "E703",
     "N806",
     "N816",
