@@ -2,6 +2,7 @@
 addopts = [
     "--color=yes",
     "--durations=0",
+    "--nbmake",
 ]
 filterwarnings = [
     "ignore:Passing a schema to Validator.iter_errors is deprecated.*:DeprecationWarning",

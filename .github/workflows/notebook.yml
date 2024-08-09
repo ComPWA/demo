@@ -24,5 +24,5 @@ jobs:
       - run: |
           for notebook in $(git ls-files | grep ipynb); do
             uv pip sync requirements.txt --quiet --system
-            pytest $notebook --nbmake --no-header --no-summary
+            pytest $notebook --no-header --no-summary
           done
