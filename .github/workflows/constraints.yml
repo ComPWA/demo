@@ -29,9 +29,8 @@ jobs:
         with:
           python-version: "3.9"
       - uses: hynek/setup-cached-uv@v2
-      - run: pip install uv
-      - run: uv pip compile binder/requirements.in -o binder/requirements.txt --no-annotate --strip-extras --upgrade
-      - run: uv pip compile requirements.in -o requirements.txt --no-annotate --strip-extras --upgrade
+      - run: pip install tox uv -c requirements.txt
+      - run: tox -e update-constraints
       - uses: actions/upload-artifact@v4
         with:
           name: pip-constraints
