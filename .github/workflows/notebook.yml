@@ -4,6 +4,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
+env:
+  UV_SYSTEM_PYTHON: true
+
 on:
   workflow_dispatch:
   pull_request:
@@ -27,8 +30,6 @@ jobs:
           sudo apt-get -y install graphviz
           pip install uv
       - run: |
-          uv venv
-          source .venv/bin/activate
           for notebook in $(git ls-files | grep ipynb); do
             uv pip sync requirements.txt --quiet --system
             pytest $notebook --no-header
