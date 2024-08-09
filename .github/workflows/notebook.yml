@@ -20,6 +20,9 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get -y install graphviz
-          pip install tensorflow==2.7 typing-extensions~=3.7.4 wrapt~=1.12.1
-          pip install ipywidgets matplotlib nbmake pytest
-      - run: pytest --nbmake
+          pip install uv
+      - run: |
+          for notebook in $(git ls-files | grep ipynb); do
+            uv pip sync requirements.txt --quiet --system
+            pytest $notebook --nbmake --no-header --no-summary
+          done
