@@ -30,7 +30,7 @@ jobs:
           python-version: "3.9"
       - uses: hynek/setup-cached-uv@v2
       - run: pip install tox uv -c requirements.txt
-      - run: tox -e update-constraints
+      - run: tox -e update
       - uses: actions/upload-artifact@v4
         with:
           name: pip-constraints
