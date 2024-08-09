@@ -27,6 +27,8 @@ jobs:
           sudo apt-get -y install graphviz
           pip install uv
       - run: |
+          uv venv
+          source .venv/bin/activate
           for notebook in $(git ls-files | grep ipynb); do
             uv pip sync requirements.txt --quiet --system
             pytest $notebook --no-header
