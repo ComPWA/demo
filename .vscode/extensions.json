@@ -5,6 +5,7 @@
     "editorconfig.editorconfig",
     "esbenp.prettier-vscode",
     "github.vscode-github-actions",
+    "mhutchie.git-graph",
     "ms-python.python",
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
