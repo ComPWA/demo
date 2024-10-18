@@ -15,6 +15,7 @@
   ],
   "ignorePaths": [
     "**/.cspell.json",
+    ".envrc",
     ".github/workflows",
     ".gitignore",
     ".pre-commit-config.yaml",
