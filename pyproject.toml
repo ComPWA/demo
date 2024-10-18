@@ -1,4 +1,7 @@
 [project]
+dependencies = [
+    "ipywidgets",
+]
 name = "compwa-demo"
 requires-python = ">=3.9"
 version = "0.0.0"
@@ -19,9 +22,6 @@ dev = [
     "tox",
     "uv",
 ]
-
-[tool.setuptools.dynamic]
-dependencies = {file = ["binder/requirements.in"]}
 
 [tool.pytest.ini_options]
 addopts = [
@@ -142,14 +142,4 @@ allowlist_externals =
 commands =
     pre-commit --all-files run {posargs}
 description = Perform all linting, formatting, and spelling checks
-
-[testenv:update]
-allowlist_externals =
-    uv
-    uvx
-commands =
-    uv pip compile binder/requirements.in -o binder/requirements.txt --no-annotate --strip-extras --upgrade
-    uv lock --upgrade
-    uvx pre-commit autoupdate
-description = Update all lock files
 """
