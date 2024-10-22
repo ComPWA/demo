@@ -9,11 +9,12 @@ version = "0.0.0"
 [project.optional-dependencies]
 dev = [
     "compwa-demo[binder]",
-    "jupyterlab >=3",
+    "jupyterlab",
     "jupyterlab-code-formatter >=3.0.0",
     "jupyterlab-git",
     "jupyterlab-lsp",
     "nbmake",
+    "pyproject-local-kernel",
     "pytest",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
