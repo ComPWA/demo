@@ -1,0 +1,14 @@
+[project]
+dependencies = [
+    "ampform[viz]==0.12.*",
+    "ipywidgets",
+    "matplotlib",
+    "numpy~=1.0",
+    "qrules[viz]==0.9.*",
+    "tensorwaves[jax,pwa]==0.4.*",
+]
+name = "2021-12-13"
+requires-python = ">=3.9"
+version = "0.0.0"
+
+[tool.uv.workspace]
