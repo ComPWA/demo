@@ -29,9 +29,4 @@ jobs:
           enable-cache: true
       - name: Install graphviz
         run: sudo apt-get -y install graphviz
-      - run: |
-          for notebook in $(git ls-files | grep ipynb); do
-            uv sync --extra dev --quiet
-            source .venv/bin/activate
-            pytest $notebook --no-header
-          done
+      - run: uv run --extra dev pytest
