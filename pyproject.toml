@@ -14,13 +14,10 @@ dev = [
     "jupyterlab-git",
     "jupyterlab-lsp",
     "nbmake",
-    "pre-commit-uv",
     "pytest",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
     "ruff",
-    "tox",
-    "uv",
 ]
 
 [tool.pytest.ini_options]
