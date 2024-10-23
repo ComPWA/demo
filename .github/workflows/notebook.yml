@@ -18,19 +18,15 @@ on:
 jobs:
   pytest:
     name: Run all notebooks
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: "3.9"
-      - uses: hynek/setup-cached-uv@v2
-      - name: Install dependencies
-        run: |
-          sudo apt-get -y install graphviz
-          pip install uv
-      - run: |
-          for notebook in $(git ls-files | grep ipynb); do
-            uv pip sync requirements.txt --quiet --system
-            pytest $notebook --no-header
-          done
+          python-version: "3.12"
+      - uses: astral-sh/setup-uv@v3
+        with:
+          enable-cache: true
+      - name: Install graphviz
+        run: sudo apt-get -y install graphviz
+      - run: uv run --extra dev pytest

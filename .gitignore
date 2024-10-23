@@ -3,5 +3,4 @@
 .ipynb_checkpoints/
 .tox/
 .virtual_documents/
-condaenv.*.requirements.txt
 node_modules/

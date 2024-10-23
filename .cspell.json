@@ -15,6 +15,7 @@
   ],
   "ignorePaths": [
     "**/.cspell.json",
+    ".envrc",
     ".github/workflows",
     ".gitignore",
     ".pre-commit-config.yaml",
@@ -97,6 +98,7 @@
     "preorder",
     "pygments",
     "pyplot",
+    "pyproject",
     "pytest",
     "redeboer",
     "rtfd",

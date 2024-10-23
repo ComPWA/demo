@@ -1,3 +1,26 @@
+[project]
+dependencies = [
+    "ipywidgets",
+]
+name = "compwa-demo"
+requires-python = ">=3.12"
+version = "0.0.0"
+
+[project.optional-dependencies]
+dev = [
+    "compwa-demo[binder]",
+    "jupyterlab",
+    "jupyterlab-code-formatter >=3.0.0",
+    "jupyterlab-git",
+    "jupyterlab-lsp",
+    "nbmake",
+    "pyproject-local-kernel",
+    "pytest",
+    "python-lsp-ruff",
+    "python-lsp-server[rope]",
+    "ruff",
+]
+
 [tool.pytest.ini_options]
 addopts = [
     "--color=yes",
@@ -12,7 +35,6 @@ filterwarnings = [
 extend-include = ["*.ipynb"]
 preview = true
 show-fixes = true
-target-version = "py37"
 
 [tool.ruff.format]
 docstring-code-format = true
@@ -90,6 +112,32 @@ sort_first = [
     "tool.setuptools",
     "tool.setuptools_scm",
 ]
-sort_table_keys = true
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist =
+    sty,
+skip_install = True
+skip_missing_interpreters = True
+skipsdist = True
+
+[testenv]
+passenv = *
+
+[testenv:nb]
+allowlist_externals =
+    pytest
+commands =
+    pytest {posargs}
+description = Run all notebooks with pytest
+
+[testenv:sty]
+allowlist_externals =
+    pre-commit
+commands =
+    pre-commit --all-files run {posargs}
+description = Perform all linting, formatting, and spelling checks
+"""
