@@ -13,7 +13,6 @@ repos:
     hooks:
       - id: check-dev-files
         args:
-          - --dev-python-version=3.11
           - --doc-apt-packages=graphviz
           - --no-cd
           - --no-cspell-update

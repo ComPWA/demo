@@ -3,7 +3,7 @@ dependencies = [
     "ipywidgets",
 ]
 name = "compwa-demo"
-requires-python = ">=3.11"
+requires-python = ">=3.12"
 version = "0.0.0"
 
 [project.optional-dependencies]
