@@ -264,7 +264,6 @@ dev = [
     { name = "jupyterlab-myst" },
     { name = "nbmake" },
     { name = "pyproject-local-kernel" },
-    { name = "pytest" },
     { name = "python-lsp-ruff" },
     { name = "python-lsp-server", extra = ["rope"] },
     { name = "ruff" },
@@ -275,8 +274,12 @@ jupyter = [
     { name = "jupyterlab-git" },
     { name = "jupyterlab-lsp" },
     { name = "jupyterlab-myst" },
+    { name = "pyproject-local-kernel" },
     { name = "python-lsp-ruff" },
     { name = "python-lsp-server", extra = ["rope"] },
+]
+notebooks = [
+    { name = "pyproject-local-kernel" },
 ]
 
 [package.metadata]
@@ -291,7 +294,6 @@ dev = [
     { name = "jupyterlab-myst" },
     { name = "nbmake" },
     { name = "pyproject-local-kernel" },
-    { name = "pytest" },
     { name = "python-lsp-ruff" },
     { name = "python-lsp-server", extras = ["rope"] },
     { name = "ruff" },
@@ -302,9 +304,11 @@ jupyter = [
     { name = "jupyterlab-git" },
     { name = "jupyterlab-lsp" },
     { name = "jupyterlab-myst" },
+    { name = "pyproject-local-kernel" },
     { name = "python-lsp-ruff" },
     { name = "python-lsp-server", extras = ["rope"] },
 ]
+notebooks = [{ name = "pyproject-local-kernel" }]
 
 [[package]]
 name = "debugpy"
