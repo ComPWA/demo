@@ -255,12 +255,13 @@ dependencies = [
     { name = "ipywidgets" },
 ]
 
-[package.optional-dependencies]
+[package.dependency-groups]
 dev = [
     { name = "jupyterlab" },
     { name = "jupyterlab-code-formatter" },
     { name = "jupyterlab-git" },
     { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
     { name = "nbmake" },
     { name = "pyproject-local-kernel" },
     { name = "pytest" },
@@ -268,21 +269,41 @@ dev = [
     { name = "python-lsp-server", extra = ["rope"] },
     { name = "ruff" },
 ]
+jupyter = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "jupyterlab-git" },
+    { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
+    { name = "python-lsp-ruff" },
+    { name = "python-lsp-server", extra = ["rope"] },
+]
 
 [package.metadata]
-requires-dist = [
-    { name = "compwa-demo", extras = ["binder"], marker = "extra == 'dev'" },
-    { name = "ipywidgets" },
-    { name = "jupyterlab", marker = "extra == 'dev'" },
-    { name = "jupyterlab-code-formatter", marker = "extra == 'dev'", specifier = ">=3.0.0" },
-    { name = "jupyterlab-git", marker = "extra == 'dev'" },
-    { name = "jupyterlab-lsp", marker = "extra == 'dev'" },
-    { name = "nbmake", marker = "extra == 'dev'" },
-    { name = "pyproject-local-kernel", marker = "extra == 'dev'" },
-    { name = "pytest", marker = "extra == 'dev'" },
-    { name = "python-lsp-ruff", marker = "extra == 'dev'" },
-    { name = "python-lsp-server", extras = ["rope"], marker = "extra == 'dev'" },
-    { name = "ruff", marker = "extra == 'dev'" },
+requires-dist = [{ name = "ipywidgets" }]
+
+[package.metadata.dependency-groups]
+dev = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "jupyterlab-git" },
+    { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
+    { name = "nbmake" },
+    { name = "pyproject-local-kernel" },
+    { name = "pytest" },
+    { name = "python-lsp-ruff" },
+    { name = "python-lsp-server", extras = ["rope"] },
+    { name = "ruff" },
+]
+jupyter = [
+    { name = "jupyterlab" },
+    { name = "jupyterlab-code-formatter" },
+    { name = "jupyterlab-git" },
+    { name = "jupyterlab-lsp" },
+    { name = "jupyterlab-myst" },
+    { name = "python-lsp-ruff" },
+    { name = "python-lsp-server", extras = ["rope"] },
 ]
 
 [[package]]
@@ -769,6 +790,18 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/b8/49/b6bc55457ebac72928c9db6e5c23c6e0a1d3a5640fc4b4abb4275f10ef7c/jupyterlab-lsp-5.1.0.tar.gz", hash = "sha256:aeac84093ada6d20ef57ae0e97811cc5796a0cab7237b32f8eddf993c0bb0356", size = 760295 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c7/ab/706cb5b018c6a8f32cea5c0d7b55d77f42d78410c4dcbb25b11b210cc972/jupyterlab_lsp-5.1.0-py3-none-any.whl", hash = "sha256:290f473b001c7ebe1edfe391a545f50bc4aefe89d4a64db4f17e8de301db3a37", size = 1564965 },
+]
+
+[[package]]
+name = "jupyterlab-myst"
+version = "2.4.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "jupyter-server", marker = "platform_system != 'Emscripten'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/5c/dc/4034f4f4e60e484094b96cde80bd3a387d5d1ad1d43e9918f6c5fde297b7/jupyterlab_myst-2.4.2.tar.gz", hash = "sha256:1b06de66d20dc3a865b07d37f54bff8b4ed01501999cc0683f336f0bcb8c6902", size = 12754014 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/ac/7c/98ad14b3cf7a7987d3c6ef5fc83609458739f28a1a34a91a9bb1b12c5f8a/jupyterlab_myst-2.4.2-py3-none-any.whl", hash = "sha256:2aa406d4754dcd2ec4fe749b6a2e15f0bc8a6c5c8f6b549419583715d8146230", size = 2689537 },
 ]
 
 [[package]]
