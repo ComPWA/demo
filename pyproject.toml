@@ -6,19 +6,26 @@ name = "compwa-demo"
 requires-python = ">=3.12"
 version = "0.0.0"
 
-[project.optional-dependencies]
+[dependency-groups]
 dev = [
-    "compwa-demo[binder]",
+    "ruff",
+    {include-group = "jupyter"},
+    {include-group = "test"},
+]
+jupyter = [
     "jupyterlab",
-    "jupyterlab-code-formatter >=3.0.0",
+    "jupyterlab-code-formatter",
     "jupyterlab-git",
     "jupyterlab-lsp",
-    "nbmake",
-    "pyproject-local-kernel",
-    "pytest",
+    "jupyterlab-myst",
     "python-lsp-ruff",
     "python-lsp-server[rope]",
-    "ruff",
+    {include-group = "notebooks"},
+]
+notebooks = ["pyproject-local-kernel"]
+test = [
+    "nbmake",
+    {include-group = "notebooks"},
 ]
 
 [tool.pytest.ini_options]

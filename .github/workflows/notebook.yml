@@ -29,4 +29,4 @@ jobs:
           enable-cache: true
       - name: Install graphviz
         run: sudo apt-get -y install graphviz
-      - run: uv run --extra dev pytest
+      - run: uv run --group test --no-dev pytest
