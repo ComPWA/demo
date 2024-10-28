@@ -8,9 +8,9 @@ version = "0.0.0"
 
 [dependency-groups]
 dev = [
-    "nbmake",
     "ruff",
     {include-group = "jupyter"},
+    {include-group = "test"},
 ]
 jupyter = [
     "jupyterlab",
@@ -23,6 +23,10 @@ jupyter = [
     {include-group = "notebooks"},
 ]
 notebooks = ["pyproject-local-kernel"]
+test = [
+    "nbmake",
+    {include-group = "notebooks"},
+]
 
 [tool.pytest.ini_options]
 addopts = [
