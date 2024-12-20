@@ -9,6 +9,7 @@
     "mhutchie.git-graph",
     "ms-python.python",
     "ms-toolsai.jupyter",
+    "ms-toolsai.vscode-jupyter-cell-tags",
     "ms-vsliveshare.vsliveshare",
     "redhat.vscode-yaml",
     "soulcode.vscode-unwanted-extensions",
@@ -26,6 +27,7 @@
     "ms-python.isort",
     "ms-python.mypy-type-checker",
     "ms-python.pylint",
+    "ms-toolsai.vscode-jupyter-slideshow",
     "travisillig.vscode-json-stable-stringify",
     "tyriar.sort-lines"
   ]
