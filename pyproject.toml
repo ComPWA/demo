@@ -114,37 +114,28 @@ all = false
 ignore_case = true
 in_place = true
 sort_first = [
-    "build-system",
     "project",
-    "tool.setuptools",
-    "tool.setuptools_scm",
+    "tool.tox.env_run_base",
 ]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 
 [tool.tox]
-legacy_tox_ini = """
-[tox]
-envlist =
-    sty,
-skip_install = True
-skip_missing_interpreters = True
-skipsdist = True
+env_list = ["sty"]
+no_package = true
+requires = ["tox>=4.21.0"]
+skip_install = true
+skip_missing_interpreters = true
 
-[testenv]
-passenv = *
+[tool.tox.env_run_base]
+pass_env = ["*"]
 
-[testenv:nb]
-allowlist_externals =
-    pytest
-commands =
-    pytest {posargs}
-description = Run all notebooks with pytest
+[tool.tox.env.nb]
+allowlist_externals = ["pytest"]
+commands = [["pytest", {replace = "posargs", extend = true}]]
+description = "Run all notebooks with pytest"
 
-[testenv:sty]
-allowlist_externals =
-    pre-commit
-commands =
-    pre-commit --all-files run {posargs}
-description = Perform all linting, formatting, and spelling checks
-"""
+[tool.tox.env.sty]
+allowlist_externals = ["pre-commit"]
+commands = [["pre-commit", "run", "--all-files", {replace = "posargs", extend = true}]]
+description = "Perform all linting, formatting, and spelling checks"
