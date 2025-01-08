@@ -121,7 +121,10 @@ spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
 
 [tool.tox]
-env_list = ["sty"]
+env_list = [
+    "nb",
+    "sty",
+]
 no_package = true
 requires = ["tox>=4.21.0"]
 skip_install = true
