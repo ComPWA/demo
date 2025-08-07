@@ -1,10 +1,10 @@
 ci:
+  autofix_commit_msg: "MAINT: implement pre-commit autofixes"
   autoupdate_commit_msg: "MAINT: upgrade lock files"
   autoupdate_schedule: quarterly
   skip:
     - uv-lock
 
-  autofix_commit_msg: "MAINT: implement pre-commit autofixes"
 repos:
   - repo: meta
     hooks:
