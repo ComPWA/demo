@@ -8,6 +8,7 @@ version = "0.0.0"
 
 [dependency-groups]
 dev = [
+    "poethepoet",
     "ruff",
     {include-group = "jupyter"},
     {include-group = "test"},
@@ -27,6 +28,21 @@ test = [
     "nbmake",
     {include-group = "notebooks"},
 ]
+
+[tool.poe]
+executor.type = "uv"
+
+[tool.poe.tasks.all]
+help = "Run all continuous integration (CI) tasks locally"
+sequence = ["style", "nb"]
+
+[tool.poe.tasks.nb]
+cmd = "pytest"
+help = "Run all notebooks"
+
+[tool.poe.tasks.style]
+cmd = "pre-commit run --all-files"
+help = "Perform all linting, formatting, and spelling checks"
 
 [tool.pytest.ini_options]
 addopts = [
@@ -113,32 +129,6 @@ convention = "google"
 all = false
 ignore_case = true
 in_place = true
-sort_first = [
-    "project",
-    "tool.tox.env_run_base",
-]
+sort_first = ["project"]
 spaces_indent_inline_array = 4
 trailing_comma_inline_array = true
-
-[tool.tox]
-env_list = [
-    "nb",
-    "sty",
-]
-no_package = true
-requires = ["tox>=4.21.0"]
-skip_install = true
-skip_missing_interpreters = true
-
-[tool.tox.env_run_base]
-pass_env = ["*"]
-
-[tool.tox.env.nb]
-allowlist_externals = ["pytest"]
-commands = [["pytest", {replace = "posargs", extend = true}]]
-description = "Run all notebooks with pytest"
-
-[tool.tox.env.sty]
-allowlist_externals = ["pre-commit"]
-commands = [["pre-commit", "run", "--all-files", {replace = "posargs", extend = true}]]
-description = "Perform all linting, formatting, and spelling checks"

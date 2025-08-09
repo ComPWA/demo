@@ -23,8 +23,7 @@
     "environment.yml",
     "pyproject.toml",
     "requirements*.in",
-    "requirements*.txt",
-    "tox.ini"
+    "requirements*.txt"
   ],
   "language": "en-US",
   "words": [
@@ -49,6 +48,7 @@
     "SymPy",
     "TensorWaves",
     "unbinned",
+    "venv",
     "Weisskopf"
   ],
   "ignoreWords": [
