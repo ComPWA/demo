@@ -1,6 +1,5 @@
 *.csv
 *.egg-info/
 .ipynb_checkpoints/
-.tox/
 .virtual_documents/
 node_modules/

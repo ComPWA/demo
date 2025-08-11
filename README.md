@@ -53,16 +53,21 @@ A collection of Jupyter notebooks that demonstrate features of the [ComPWA](http
 
 ## Local installation
 
-It's easiest to work with [Conda](https://docs.conda.io/en/latest/index.html) ([Miniconda](https://docs.conda.io/en/latest/miniconda.html)). The installation procedure then simply becomes:
+[Install `uv`](https://docs.astral.sh/uv) and run
 
 ```shell
-conda env create
-conda activate compwa-demo
+source .venv/bin/activate
+```
+
+to create a virtual environment and with dependencies installed. In addition, it is useful to install [`pre-commit`](https://pre-commit.com) once:
+
+```shell
+uv tool install --with pre-commit-uv pre-commit
 pre-commit install --install-hooks
 ```
 
-Style checks can now be performed with either of the commands `pre-commit run -a` or `tox`. To run a specific notebook or a folder with notebooks, use e.g.:
+Style checks can now be performed with either of the commands `pre-commit run -a` or `poe style`. To run a specific notebook or a folder with notebooks, use e.g.:
 
 ```shell
-tox -e nb 2021.11.29/qrules.ipynb
+poe nb 2021.11.29/qrules.ipynb
 ```
