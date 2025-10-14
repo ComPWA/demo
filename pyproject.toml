@@ -1,9 +1,7 @@
 [project]
-dependencies = [
-    "ipywidgets",
-]
+dependencies = ["ipywidgets"]
 name = "compwa-demo"
-requires-python = ">=3.12"
+requires-python = "~=3.13.0"
 version = "0.0.0"
 
 [dependency-groups]
@@ -24,10 +22,7 @@ jupyter = [
     {include-group = "notebooks"},
 ]
 notebooks = ["pyproject-local-kernel"]
-test = [
-    "nbmake",
-    {include-group = "notebooks"},
-]
+test = ["nbmake", {include-group = "notebooks"}]
 
 [tool.poe]
 executor.type = "uv"
@@ -45,11 +40,7 @@ cmd = "pre-commit run --all-files"
 help = "Perform all linting, formatting, and spelling checks"
 
 [tool.pytest.ini_options]
-addopts = [
-    "--color=yes",
-    "--durations=0",
-    "--nbmake",
-]
+addopts = ["--color=yes", "--durations=0", "--nbmake"]
 filterwarnings = [
     "ignore:Passing a schema to Validator.iter_errors is deprecated.*:DeprecationWarning",
 ]
