@@ -34,6 +34,11 @@ executor.type = "uv"
 help = "Run all continuous integration (CI) tasks locally"
 sequence = ["style", "nb"]
 
+[tool.poe.tasks.lab]
+args = [{name = "paths", default = "", positional = true}]
+cmd = "jupyter lab ${paths}"
+help = "Run Jupyter Lab"
+
 [tool.poe.tasks.nb]
 cmd = "pytest"
 help = "Run all notebooks"
