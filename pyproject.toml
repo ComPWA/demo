@@ -8,42 +8,45 @@ version = "0.0.0"
 
 [dependency-groups]
 dev = [
-    "poethepoet",
     "ruff",
     {include-group = "jupyter"},
     {include-group = "test"},
 ]
 jupyter = [
+    "jupyter-ruff",
     "jupyterlab",
-    "jupyterlab-code-formatter",
     "jupyterlab-git",
     "jupyterlab-lsp",
-    "jupyterlab-myst",
     "jupyterlab-quickopen",
     "python-lsp-ruff",
-    "python-lsp-server[rope]",
+    "python-lsp-server",
     {include-group = "notebooks"},
 ]
 notebooks = ["pyproject-local-kernel"]
 test = [
-    "nbmake",
     {include-group = "notebooks"},
 ]
 
-[tool.poe]
-executor.type = "uv"
+[tool.poe.executor]
+isolated = true
+no-group = "dev"
+type = "uv"
 
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"
+ignore_fail = "return_non_zero"
 sequence = ["style", "nb"]
 
 [tool.poe.tasks.lab]
 args = [{name = "paths", default = "", positional = true}]
 cmd = "jupyter lab ${paths}"
-help = "Run Jupyter Lab"
+executor = {group = "jupyter"}
+help = "Launch Jupyter Lab"
 
 [tool.poe.tasks.nb]
-cmd = "pytest"
+args = [{name = "paths", default = "docs", multiple = true, positional = true}]
+cmd = "pytest --nbmake --nbmake-timeout=0 ${paths}"
+executor = {group = "notebooks", with = "nbmake"}
 help = "Run all notebooks"
 
 [tool.poe.tasks.style]
@@ -93,6 +96,7 @@ ignore = [
     "PLW1514",
     "PT001",
     "PTH",
+    "RUF067",
     "SIM108",
 ]
 select = ["ALL"]
