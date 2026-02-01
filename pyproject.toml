@@ -10,7 +10,7 @@ version = "0.0.0"
 dev = [
     "ruff",
     {include-group = "jupyter"},
-    {include-group = "test"},
+    {include-group = "notebooks"},
 ]
 jupyter = [
     "jupyter-ruff",
@@ -23,9 +23,6 @@ jupyter = [
     {include-group = "notebooks"},
 ]
 notebooks = ["pyproject-local-kernel"]
-test = [
-    {include-group = "notebooks"},
-]
 
 [tool.poe.executor]
 isolated = true

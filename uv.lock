@@ -290,9 +290,6 @@ jupyter = [
 notebooks = [
     { name = "pyproject-local-kernel" },
 ]
-test = [
-    { name = "pyproject-local-kernel" },
-]
 
 [package.metadata]
 requires-dist = [{ name = "ipywidgets" }]
@@ -320,7 +317,6 @@ jupyter = [
     { name = "python-lsp-server" },
 ]
 notebooks = [{ name = "pyproject-local-kernel" }]
-test = [{ name = "pyproject-local-kernel" }]
 
 [[package]]
 name = "debugpy"
