@@ -27,4 +27,4 @@ jobs:
       - uses: astral-sh/setup-uv@v7
       - name: Install graphviz
         run: sudo apt-get -y install graphviz
-      - run: uv run --group notebooks --no-dev --with poethepoet poe nb
+      - run: uvx --from poethepoet poe nb
