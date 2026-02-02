@@ -43,7 +43,7 @@ help = "Launch Jupyter Lab"
 [tool.poe.tasks.nb]
 args = [{name = "paths", default = "", multiple = true, positional = true}]
 cmd = "pytest --nbmake --nbmake-timeout=0 ${paths}"
-executor = {group = "notebooks", with = "nbmake"}
+executor = {group = "notebooks", with = ["nbmake", "pyproject-local-kernel"]}
 help = "Run all notebooks"
 
 [tool.poe.tasks.style]
