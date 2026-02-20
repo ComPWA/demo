@@ -15,15 +15,15 @@
   ],
   "ignorePaths": [
     "**/.cspell.json",
+    ".editorconfig",
     ".envrc",
-    ".github/workflows",
+    ".github/dependabot.yml",
     ".gitignore",
     ".pre-commit-config.yaml",
+    ".prettierignore",
+    ".taplo.toml",
     ".vscode/*",
-    "environment.yml",
-    "pyproject.toml",
-    "requirements*.in",
-    "requirements*.txt"
+    "pyproject.toml"
   ],
   "language": "en-US",
   "words": [
@@ -55,7 +55,6 @@
     "COMAP",
     "Colab",
     "Colaboratory",
-    "MAINT",
     "Miniconda",
     "absl",
     "asdot",
@@ -94,6 +93,7 @@
     "nbmake",
     "nrows",
     "phsp",
+    "poethepoet",
     "posify",
     "preorder",
     "pygments",
@@ -110,5 +110,12 @@
     "xlabel",
     "xreplace",
     "yticks"
-  ]
+  ],
+  "enableFiletypes": [
+    "git-commit",
+    "github-actions-workflow",
+    "julia",
+    "jupyter"
+  ],
+  "useGitignore": true
 }
