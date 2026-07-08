@@ -24,6 +24,15 @@ jupyter = [
 ]
 notebooks = ["pyproject-local-kernel"]
 
+[tool.compwa.policy]
+doc-apt-packages = "graphviz"
+repo-name = "ComPWA-demo"
+repo-title = "ComPWA demos"
+
+[tool.compwa.policy.github]
+no-cd = true
+no-pypi = true
+
 [tool.poe.executor]
 isolated = true
 no-group = "dev"
