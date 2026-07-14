@@ -1,16 +1,14 @@
 [project]
-dependencies = [
-    "ipywidgets",
-]
 name = "compwa-demo"
-requires-python = "~=3.13.0"
 version = "0.0.0"
+requires-python = "~=3.13.0"
+dependencies = ["ipywidgets"]
 
 [dependency-groups]
 dev = [
     "ruff",
-    {include-group = "jupyter"},
-    {include-group = "notebooks"},
+    { include-group = "jupyter" },
+    { include-group = "notebooks" },
 ]
 jupyter = [
     "jupyter-ruff",
@@ -20,7 +18,7 @@ jupyter = [
     "jupyterlab-quickopen",
     "python-lsp-ruff",
     "python-lsp-server",
-    {include-group = "notebooks"},
+    { include-group = "notebooks" },
 ]
 notebooks = ["pyproject-local-kernel"]
 
@@ -42,15 +40,15 @@ type = "uv"
 heading = "Notebooks"
 
 [tool.poe.groups.notebook.tasks.lab]
-args = [{name = "paths", default = "", positional = true}]
+args = [{ name = "paths", default = "", positional = true }]
 cmd = "jupyter lab ${paths}"
-executor = {group = "jupyter"}
+executor = { group = "jupyter" }
 help = "Launch Jupyter Lab"
 
 [tool.poe.groups.notebook.tasks.nb]
-args = [{name = "paths", default = "", multiple = true, positional = true}]
+args = [{ name = "paths", default = "", multiple = true, positional = true }]
 cmd = "pytest --nbmake --nbmake-timeout=0 ${paths}"
-executor = {group = "notebooks", with = ["nbmake", "pyproject-local-kernel"]}
+executor = { group = "notebooks", with = ["nbmake", "pyproject-local-kernel"] }
 help = "Run all notebooks"
 
 [tool.poe.tasks.all]
@@ -63,12 +61,17 @@ cmd = "pre-commit run --all-files"
 help = "Perform all linting, formatting, and spelling checks"
 
 [tool.poe.tasks.upgrade]
-executor = {type = "simple"}
+executor = { type = "simple" }
 help = "Upgrade lock files"
-parallel = [
-    {cmd = "pre-commit autoupdate -j8"},
-    {cmd = "uv lock --upgrade"},
-]
+parallel = ["_upgrade-precommit", "_upgrade-uv"]
+
+[tool.poe.tasks._upgrade-precommit]
+cmd = "pre-commit autoupdate -j8"
+executor = { type = "simple" }
+
+[tool.poe.tasks._upgrade-uv]
+cmd = "uv lock --upgrade"
+executor = { type = "simple" }
 
 [tool.pytest.ini_options]
 addopts = [
@@ -120,7 +123,7 @@ select = ["ALL"]
 task-tags = ["cspell"]
 
 [tool.ruff.lint.flake8-builtins]
-builtins-ignorelist = ["display"]
+ignorelist = ["display"]
 
 [tool.ruff.lint.flake8-comprehensions]
 allow-dict-calls-with-keyword-arguments = true
@@ -152,10 +155,17 @@ split-on-trailing-comma = false
 [tool.ruff.lint.pydocstyle]
 convention = "google"
 
-[tool.tomlsort]
-all = false
-ignore_case = true
-in_place = true
-sort_first = ["project"]
-spaces_indent_inline_array = 4
-trailing_comma_inline_array = true
+[tool.tombi.files]
+exclude = ["uv.lock"]
+
+[tool.tombi.format.rules]
+indent-width = 4
+line-width = 88
+
+[tool.tombi.lint.rules]
+key-empty = "off"
+
+[[tool.tombi.schemas]]
+root = "tool.compwa.policy"
+path = "https://raw.githubusercontent.com/ComPWA/policy/1a1d5e8a13c4f76cee452121b5bafe2286dec2f4/compwa-policy.schema.json"
+include = ["pyproject.toml"]
