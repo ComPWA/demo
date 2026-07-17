@@ -21,7 +21,6 @@
     ".gitignore",
     ".pre-commit-config.yaml",
     ".prettierignore",
-    ".taplo.toml",
     ".vscode/*",
     "pyproject.toml"
   ],
