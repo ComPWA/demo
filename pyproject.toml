@@ -31,6 +31,27 @@ repo-title = "ComPWA demos"
 no-cd = true
 no-pypi = true
 
+[tool.lychee]
+cache = true
+cache_exclude_status = "400.."
+# [:] keeps Lychee from extracting regex patterns as URLs.
+exclude = [
+    # OneDrive returns 403 for unauthenticated requests to these shares.
+    '^https[:]//1drv\.ms/p/s!Ai5ZGBfm7ipQlJp2wH9IWwmFGD4bpQ\?e=9hrdUK$',
+    '^https[:]//1drv\.ms/p/s!Ai5ZGBfm7ipQk9k1TpgcoEOz-qR1Zw\?e=dxvVQr$',
+    '^https[:]//1drv\.ms/b/s!Ai5ZGBfm7ipQk9k3Fr8o6q5H_YSaqQ\?e=fkuYBo$',
+    '^https[:]//1drv\.ms/p/s!Ai5ZGBfm7ipQk9IeaGc9GA34PqEGIw\?e=JlHjII$',
+    '^https[:]//1drv\.ms/p/s!Ai5ZGBfm7ipQk8538zF3cyOflWxiUw\?e=EYHVvX$',
+    # These meeting materials require IHEP single sign-on.
+    '^https[:]//indico\.ihep\.ac\.cn/event/18456/contributions/129390$',
+    '^https[:]//indico\.ihep\.ac\.cn/event/18456/contributions/129390/attachments/67431/80088/2023\.03\.16_polarimetry_bes3_v1\.pdf$',
+    '^https[:]//indico\.ihep\.ac\.cn/event/15291$',
+]
+hidden = true
+include_fragments = "anchor-only"
+include_verbatim = true
+max_cache_age = "7d"
+
 [tool.poe.executor]
 isolated = true
 no-group = "dev"
@@ -51,10 +72,15 @@ cmd = "pytest --nbmake --nbmake-timeout=0 ${paths}"
 executor = { group = "notebooks", with = ["nbmake", "pyproject-local-kernel"] }
 help = "Run all notebooks"
 
+[tool.poe.groups.doc.tasks.linkcheck]
+cmd = "uvx --from lychee-bin lychee . --quiet"
+executor = { type = "simple" }
+help = "Check links in repository sources (requires internet connection)"
+
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"
 ignore_fail = "return_non_zero"
-sequence = ["style", "nb"]
+sequence = ["style", "linkcheck", "nb"]
 
 [tool.poe.tasks.style]
 cmd = "prek run --all-files"

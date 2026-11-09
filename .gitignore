@@ -1,5 +1,6 @@
 *.csv
 *.egg-info/
 .ipynb_checkpoints/
+.lycheecache
 .virtual_documents/
 node_modules/
