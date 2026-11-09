@@ -71,4 +71,3 @@ Style checks can now be performed with either of the commands `pre-commit run -a
 ```shell
 poe nb 2021.11.29/qrules.ipynb
 ```
-
