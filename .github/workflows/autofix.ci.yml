@@ -1,0 +1,11 @@
+name: autofix.ci
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize, labeled]
+    branches:
+      - main
+
+jobs:
+  autofix:
+    uses: ComPWA/actions/.github/workflows/autofix.ci.yml@d042c483a3a7fd3203810bbd4f778fe6ce16df02 # shared-autofix
