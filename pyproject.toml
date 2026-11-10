@@ -28,6 +28,7 @@ repo-name = "ComPWA-demo"
 repo-title = "ComPWA demos"
 
 [tool.compwa.policy.github]
+dependabot-assignees = ["redeboer"]
 no-cd = true
 no-pypi = true
 
