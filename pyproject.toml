@@ -81,7 +81,11 @@ help = "Check links in repository sources (requires internet connection)"
 [tool.poe.tasks.all]
 help = "Run all continuous integration (CI) tasks locally"
 ignore_fail = "return_non_zero"
-sequence = ["style", "linkcheck", "nb"]
+sequence = [
+    "style",
+    "linkcheck",
+    "nb",
+]
 
 [tool.poe.tasks.style]
 cmd = "prek run --all-files"
