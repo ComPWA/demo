@@ -1,5 +1,15 @@
 *.csv
 *.egg-info/
 .ipynb_checkpoints/
+.lycheecache
 .virtual_documents/
 node_modules/
+
+# Agent tooling
+.agents/
+.claude/
+.codex/
+.gemini/
+AGENTS.md
+CLAUDE.md
+GEMINI.md
